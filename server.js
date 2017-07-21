@@ -18,6 +18,10 @@ app.get('/view/:slug', function(req, res) {
 	var slug = req.params.slug;
 
 	elemeno.getCollectionItem('portfolio', slug, function(err, response) {
+		if (err) {
+			return res.render('404.pug');
+		}
+		
 		res.render('details.pug', {project: response.data});
 	});
 });
