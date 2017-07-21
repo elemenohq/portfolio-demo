@@ -1,1 +1,5 @@
-h1 Hello World!
+for project in projects
+	h1= project.title
+	div!= project.content.description.html
+	img(src= project.content.screenshot.imageUrl)
+	p: a(href= project.content.link) Visit Site
