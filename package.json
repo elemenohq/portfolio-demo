@@ -13,5 +13,10 @@
   "bugs": {
     "url": "https://github.com/elemenohq/portfolio-demo/issues"
   },
-  "homepage": "https://github.com/elemenohq/portfolio-demo"
+  "homepage": "https://github.com/elemenohq/portfolio-demo",
+  "dependencies": {
+    "elemeno": "~1.1.0",
+    "express": "~4.15.3",
+    "pug": "~2.0.0-rc.2"
+  }
 }
