@@ -14,6 +14,14 @@ app.get('/', function(req, res) {
 	});
 });
 
+app.get('/view/:slug', function(req, res) {
+	var slug = req.params.slug;
+
+	elemeno.getCollectionItem('portfolio', slug, function(err, response) {
+		res.render('details.pug', {project: response.data});
+	});
+});
+
 app.listen(3000, function () {
 	console.log('Portfolio listening on port 3000');
 });
